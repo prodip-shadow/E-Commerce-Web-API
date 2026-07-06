@@ -1,6 +1,47 @@
-@E_commerce_HostAddress = http://localhost:5253
+### Variables
+@baseUrl = http://localhost:5253
 
-GET {{E_commerce_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. GET ALL
+GET {{baseUrl}}/api/categories
+
 
 ###
+
+### 2. GET single value  (NOT WORKABLE)
+GET {{baseUrl}}/api/categories/3df0c02f-2d7d-46b3-a305-a9341027700b     
+
+
+###
+
+### 3. GET query value
+GET {{baseUrl}}/api/categories?searchValue=power
+
+
+###
+
+### 4. POST 
+POST {{baseUrl}}/api/categories
+Content-Type: application/json
+
+{
+    "Name": "Prtordp",
+    "Description": "The world is not ready for this"
+}
+
+###
+
+### 5. PUT
+
+PUT {{baseUrl}}/api/categories/6d89130b-d3e4-4612-97f5-b15273bc4776
+Content-Type: application/json
+
+{
+    "Name": "c",
+    "Description": ""
+}
+
+###
+
+### 6. DELETE 
+DELETE {{baseUrl}}/api/categories/abaaf392-806b-48cf-8256-45d8540651cd
+
